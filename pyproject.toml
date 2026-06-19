@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.21.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "weav-ai-providers"
+version = "0.1.0"
+description = "Provider adapters and provider-router facade for WeavInt AI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "WeavInt Authors" }]
+dependencies = [
+  "weav-ai-core @ git+https://github.com/zeturn/weav-ai-core.git@main",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["weav_ai_providers"]
